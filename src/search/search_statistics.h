@@ -59,10 +59,12 @@ public:
     int get_evaluated_states() const {return evaluated_states; }
     int get_evaluations() const {return evaluations; }
     int get_generated() const {return generated_states; }
+    int get_num_plans_found() const {return num_plans_found; }
     int get_reopened() const {return reopened_states; }
     int get_generated_ops() const {return generated_ops; }
     
     int get_num_djkstra_runs() const {return num_djkstra_runs; }
+    int get_total_djkstra_generations() const {return total_djkstra_node_generations; }
     /*
       Call the following method with the f value of every expanded
       state. It will notice "jumps" (i.e., when the expanded f value

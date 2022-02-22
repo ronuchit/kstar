@@ -198,6 +198,7 @@ SearchStatus TopKEagerSearch::step() {
             cout << ", the search bound is updated to " << bound - 1 << endl;
         }
         sort_and_remove(s);
+        cout << "A* generated: " << statistics.get_generated() << "\tDijkstra generated: " << statistics.get_total_djkstra_generations() << endl;
 
         node.unclose();
         EvaluationContext eval_context(s, node.get_g(), true, &statistics);

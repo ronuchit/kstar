@@ -353,6 +353,7 @@ bool KStar::djkstra_search() {
             }
             inc_optimal_plans_count(plan_reconstructor->get_last_added_plan_cost());
             statistics.inc_plans_found();
+            cout << "A* generated: " << statistics.get_generated() << "\tDijkstra generated: " << statistics.get_total_djkstra_generations() << endl;
         } else {
             if (verbosity >= Verbosity::NORMAL) {
                 cout << "  Duplicate, not added" << endl;
